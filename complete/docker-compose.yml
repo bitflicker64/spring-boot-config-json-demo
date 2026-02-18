@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8085:8085"
+    environment:
+      SPRING_APPLICATION_JSON: >
+        {
+          "server": {
+            "port": 8085
+          },
+          "app": {
+            "message": "from-json-now-changed at runtime"
+          }
+        }
